@@ -1,0 +1,10 @@
+services:
+  vpn-status-api:
+    build:
+      context: .
+    container_name: vpn-status-api
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
