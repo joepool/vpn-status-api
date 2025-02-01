@@ -1,0 +1,16 @@
+- Torrent VPN:
+    icon: pia.svg
+    server: docker
+    container: vpn-status-api
+    widget:
+      type: customapi
+      url: http://192.168.x.x:5000/vpn-status
+      refreshInterval: 300000
+      method: GET
+      mappings:
+        - field:
+            connected_server: ip
+          label: Server IP
+        - field:
+            connected_server: region
+          label: Server
